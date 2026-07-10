@@ -1,0 +1,16 @@
+{
+  "spot": 97500.0,
+  "window_open": 97000.0,
+  "time_remaining_ms": 120000,
+  "window_duration_ms": 300000,
+  "sigma": 0.65,
+  "slope": 0.0015,
+  "rolling_up_rate": 0.52,
+  "ask_up": 0.52,
+  "ask_down": 0.46,
+  "has_real_down": true,
+  "quote_age_up_ms": 500,
+  "quote_age_down_ms": 800,
+  "spread_up": 0.02,
+  "spread_down": 0.03
+}

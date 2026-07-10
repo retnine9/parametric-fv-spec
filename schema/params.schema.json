@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ParametricFVParams",
+  "type": "object",
+  "required": [
+    "vol_window_secs",
+    "vol_floor",
+    "vol_ceiling",
+    "momentum_lookback_secs",
+    "momentum_blend_floor",
+    "momentum_blend_ceiling",
+    "momentum_blend_max",
+    "pes_size_buckets_usd"
+  ],
+  "properties": {
+    "asset": { "type": "string" },
+    "window": { "type": "string" },
+    "vol_window_secs": { "type": "integer", "minimum": 60 },
+    "vol_floor": { "type": "number", "minimum": 0 },
+    "vol_ceiling": { "type": "number", "minimum": 0 },
+    "ou_enabled": { "type": "boolean", "default": false },
+    "ou_theta": { "type": "number", "minimum": 0 },
+    "ou_mu": { "type": "number" },
+    "student_t_dof": { "type": "number", "default": 0 },
+    "momentum_lookback_secs": { "type": "integer", "minimum": 1 },
+    "momentum_blend_floor": { "type": "number" },
+    "momentum_blend_ceiling": { "type": "number" },
+    "momentum_blend_max": { "type": "number", "minimum": 0, "maximum": 1 },
+    "trend_boost_max": { "type": "number", "minimum": 0, "maximum": 1 },
+    "trend_ramp_start": { "type": "number" },
+    "trend_ramp_full": { "type": "number" },
+    "persistence_base_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+    "persistence_ramp_start": { "type": "number" },
+    "persistence_ramp_full": { "type": "number" },
+    "cal_scale": { "type": "number" },
+    "cal_drift": { "type": "number" },
+    "cal_drift_sigma": { "type": "number" },
+    "isotonic_x": { "type": "array", "items": { "type": "number" } },
+    "isotonic_y": { "type": "array", "items": { "type": "number" } },
+    "pes_size_buckets_usd": {
+      "type": "array",
+      "items": { "type": "number", "minimum": 0 },
+      "minItems": 1
+    },
+    "pes_score_threshold": { "type": "number" },
+    "pes_min_expected_reward_dollars": { "type": "number" },
+    "pes_min_expected_reward_per_share": { "type": "number" },
+    "pes_min_lockup_floor": { "type": "number", "minimum": 0 },
+    "pes_max_spread": { "type": "number" },
+    "pes_max_quote_age_ms": { "type": "integer", "minimum": 0 },
+    "regime_boundary_high": { "type": "number" }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "ask_levels_up": [
+    {"price": 0.52, "size_shares": 100},
+    {"price": 0.54, "size_shares": 200}
+  ],
+  "ask_levels_down": [
+    {"price": 0.46, "size_shares": 150},
+    {"price": 0.48, "size_shares": 200}
+  ]
+}
